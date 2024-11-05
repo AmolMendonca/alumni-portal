@@ -1,0 +1,50 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints (if applicable)
+.ipynb_checkpoints/
+
+# Coverage reports (for testing frameworks)
+htmlcov/
+coverage.xml
+*.cover
+*.coverage
+*.cov
+
+# IDE-specific files (optional)
+.vscode/
+.idea/
+*.iml
+
+# Backup files
+*.bak
+*.orig
+
+# Compiled C extensions (if applicable)
+*.so
+
+# Database files (local database)
+*.sqlite3
+
+# Generated docs
+/build/
