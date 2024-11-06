@@ -1,9 +1,9 @@
 import React from 'react';
-import { Users, HeartHandshake, Flag } from 'lucide-react';
+import { Users, HeartHandshake, Flag, Newspaper } from 'lucide-react';
 
 const Footer = () => {
   const links = [
-    { name: 'About Us', href: '/about', icon: Users },
+    { name: 'News', href: '/news', icon: Newspaper },
     { name: 'Team', href: '/team', icon: HeartHandshake },
     { name: 'Report', href: '/report', icon: Flag }
   ];
