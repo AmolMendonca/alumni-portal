@@ -1,4 +1,4 @@
-# Linkd
+# Stealth // building some alumni related stuff
 
 Connect with alumni and find your heroes. A platform that uses AI to help students discover and connect with successful alumni from their institutions.
 
@@ -120,7 +120,7 @@ def vectorize_profile(profile):
 - FAISS for fast similarity search
 - sentence-transformers for AI embeddings
 
-### AI Components
+### Model Components
 - **Model**: all-MiniLM-L6-v2
   - Optimized for short text
   - Good balance of speed and accuracy
@@ -148,38 +148,7 @@ source venv/bin/activate  # or `venv\Scripts\activate` on Windows
 pip install -r requirements.txt
 python app.py
 ```
-
-## 📁 Project Structure
-
-```
-linkd/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/    # React components
-│   │   └── services/     # API services
-│   └── package.json
-│
-└── flask-server/          # Flask backend
-    ├── app.py            # Main server file
-    ├── requirements.txt
-    └── db/              # Database utilities
-```
-
 ## 🔍 Search Features
-
-### Natural Language Understanding
-- Handles complex queries:
-  ```
-  "Find ML engineers from Stanford working at FAANG"
-  "Show me founders who previously worked at Google"
-  "Alumni who transitioned from engineering to product management"
-  ```
-
-### Semantic Matching
-- Matches related concepts:
-  - "AI" ↔ "Machine Learning" ↔ "Deep Learning"
-  - "Startup founder" ↔ "Entrepreneur" ↔ "CEO"
-  - "Software engineer" ↔ "Developer" ↔ "Programmer"
 
 ### Performance
 - Average query time: <50ms
@@ -210,9 +179,9 @@ Frontend runs on `http://localhost:3000`
 ## 📝 Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/AmolandSatvikarethebest`)
+3. Commit your changes (`git commit -m 'Add a Coinbase Puzzle'`)
+4. Push to the branch (`git push origin feature/goats`)
 5. Open a Pull Request
 
 ## 📄 License
