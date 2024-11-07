@@ -5,7 +5,6 @@ import SearchResults from './SearchResults';
 import Footer from './Footer';
 import axios from 'axios';
 
-
 const LandingPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -17,9 +16,8 @@ const LandingPage = () => {
     { id: 2, name: 'Cathedral and John Connon Alumni' },
     { id: 3, name: 'Alumni who are a part of YC' }
   ];
-  
 
-  const API_URL = 'http://localhost:8000'; // Changed from 5000 to 8000
+  const API_URL = 'http://localhost:8000';
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -57,6 +55,13 @@ const LandingPage = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // New function to handle category click
+  const handleCategoryClick = (categoryName) => {
+    setSearchQuery(categoryName);
+    // Focus the input field
+    document.querySelector('input[type="text"]').focus();
   };
   
   return (
@@ -101,19 +106,18 @@ const LandingPage = () => {
           </div>
         ) : (
           <>
-            {searchQuery === '' && (
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
-                  >
-                    {category.name} →
-                  </button>
-                ))}
-              </div>
-            )}
-            <SearchResults results={searchResults} />
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => handleCategoryClick(category.name)}
+                  className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full hover:bg-blue-100 transition-colors"
+                >
+                  {category.name} →
+                </button>
+              ))}
+            </div>
+            {searchResults.length > 0 && <SearchResults results={searchResults} />}
           </>
         )}
       </main>
