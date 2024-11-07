@@ -1,6 +1,6 @@
 # Stealth // building some alumni related stuff
 
-Connect with alumni and find your heroes. A platform that uses AI to help students discover and connect with successful alumni from their institutions.
+In a world where success often depends on who you know, students face a critical challenge: connecting with the right mentors who've walked their path. Traditional alumni networks are fragmented, static, and often fail to create meaningful connections. We use AI to revolutionize how students connect with alumni. By understanding natural language queries like "Find me someone who transitioned from engineering to VC" or "Show me Stanford grads working on AI at Google," we make finding the right mentor as intuitive as having a conversation.
 
 ## 🚀 Key Features
 
