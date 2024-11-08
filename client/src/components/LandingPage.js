@@ -96,10 +96,13 @@ const LandingPage = () => {
       <Navbar />
       
       <main className="max-w-4xl mx-auto mt-32 px-4 pb-12">
-        <h1 className="text-5xl font-bold text-center mb-16">
-            Direct access. {' '}
-          <span className="bg-purple-100 px-2 rounded-lg">Real insights.</span>
+      <h1 className="text-5xl font-bold text-center mb-16 leading-normal">
+          Direct access.{' '}
+          <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-blue-400">
+            Real insights.
+          </span>
         </h1>
+
   
         <div className="relative max-w-3xl mx-auto mb-8">
       <form onSubmit={handleSearch} className="relative">
