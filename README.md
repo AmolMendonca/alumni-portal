@@ -20,6 +20,59 @@ In a world where success often depends on who you know, students face a critical
 
 ### How Vector Search Works
 
+## 🧠 Vector Search Architecture
+
+Our vector search implementation follows this architecture:
+
+```mermaid
+flowchart TB
+    subgraph Input ["Input Processing"]
+        A[Raw Text Query] --> B[Sentence Transformer]
+        B --> C[384d Query Vector]
+        
+        D[Profile Text] --> E[Sentence Transformer]
+        E --> F[384d Profile Vector]
+    end
+
+    subgraph Storage ["Storage Layer"]
+        G[(MongoDB)]
+        H[FAISS Index]
+        F --> G
+        F --> H
+    end
+
+    subgraph Search ["Search Process"]
+        C --> I{FAISS Search}
+        H --> I
+        I --> J[K-Nearest Neighbors]
+        J --> K[Top K Results]
+    end
+
+    subgraph Results ["Result Processing"]
+        K --> L[Get Profile IDs]
+        L --> M[Fetch from MongoDB]
+        G --> M
+        M --> N[Final Results]
+    end
+
+    style Input fill:#e1f5fe,stroke:#01579b
+    style Storage fill:#e8f5e9,stroke:#1b5e20
+    style Search fill:#fff3e0,stroke:#e65100
+    style Results fill:#f3e5f5,stroke:#4a148c
+
+    %% Add technical details as notes
+    classDef note fill:#fff,stroke:#999
+    class NoteModel,NoteVector,NoteSimilarity note
+
+    NoteModel[/"Model: all-MiniLM-L6-v2"/]
+    NoteVector[/"Vector Dim: 384"/]
+    NoteSimilarity[/"Metrics: L2 Distance<br/>Cosine Similarity"/]
+
+    B --- NoteModel
+    F --- NoteVector
+    I --- NoteSimilarity
+```
+
 #### 1. Vector Embeddings
 When you search for "someone from Stanford working at Google", here's what happens:
 
