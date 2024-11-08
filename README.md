@@ -20,8 +20,6 @@ In a world where success often depends on who you know, students face a critical
 
 ### How Vector Search Works
 
-## 🧠 Vector Search Architecture
-
 Our vector search implementation follows this architecture:
 
 ```mermaid
