@@ -97,8 +97,8 @@ const LandingPage = () => {
       
       <main className="max-w-4xl mx-auto mt-32 px-4 pb-12">
         <h1 className="text-5xl font-bold text-center mb-16">
-          Find your{' '}
-          <span className="bg-purple-100 px-2 rounded-lg">hero.</span>
+            Direct access. {' '}
+          <span className="bg-purple-100 px-2 rounded-lg">Real insights.</span>
         </h1>
   
         <div className="relative max-w-3xl mx-auto mb-8">
