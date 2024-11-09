@@ -5,8 +5,6 @@ import TeamPage from './components/TeamPage';
 import NewsPage from './components/NewsPage';
 import ReportPage from './components/ReportPage';
 
-
-
 function App() {
   return (
     <Router>
